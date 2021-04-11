@@ -29,13 +29,9 @@ namespace Fignum.BusinessLogic
             int[] iaArr = inputString.Split(',').Select(n => Convert.ToInt32(n)).ToArray();
             iaArr = iaArr.OrderByDescending(c => c).ToArray();
             String sortString = string.Empty; 
-            foreach (int ia in iaArr)
-            {
-                if (string.IsNullOrEmpty(sortString))
-                    sortString = ia.ToString();
-                else
-                     sortString = sortString + "," + ia.ToString();
-            }
+            foreach (int ia in iaArr)            
+                sortString =  string.IsNullOrEmpty(sortString) ? ia.ToString() : sortString + "," + ia.ToString();                                  
+            
             stringResponse.InputString = sortString;
             return stringResponse;
         }
@@ -47,13 +43,8 @@ namespace Fignum.BusinessLogic
             string cleanString = string.Empty;
             foreach (int ia in iaArr )
             {
-                if (!IsPrime(ia))
-                {
-                    if (string.IsNullOrEmpty(cleanString))
-                        cleanString =  ia.ToString();
-                    else 
-                        cleanString = cleanString + "," + ia.ToString();
-                }                                    
+                if (!IsPrime(ia))                
+                    cleanString = string.IsNullOrEmpty(cleanString) ? ia.ToString() : cleanString + "," + ia.ToString();
             }
              stringResponse.InputString = cleanString;
             return stringResponse;
