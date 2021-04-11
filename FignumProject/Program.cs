@@ -21,9 +21,9 @@ namespace FignumProject
 
             Console.WriteLine($"original String ==  { str}");
 
-            IStringService stringService = new StringService();
+            IFilterService stringService = new FilterService();
             AppSettings appSettings = new AppSettings();
-            StringResponse strResponse = new StringResponse(str);
+            FilterResponse strResponse = new FilterResponse(str);
 
             // Filter Prime Numbers
             if (appSettings.ProcessFilterPrimeNumbers)

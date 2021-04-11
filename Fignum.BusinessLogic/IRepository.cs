@@ -2,6 +2,6 @@
 {
 	public interface IRepository
 	{
-		string SaveString(StringResponse inputString);
+		string SaveString(FilterResponse inputString);
 	}
 }

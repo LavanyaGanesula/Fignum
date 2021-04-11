@@ -4,7 +4,7 @@ namespace CodeLuau.Tests
 {
     class FakeRepository : IRepository
     {
-        public string SaveString(StringResponse inputString)
+        public string SaveString(FilterResponse inputString)
         {
             if (inputString == null)
             {

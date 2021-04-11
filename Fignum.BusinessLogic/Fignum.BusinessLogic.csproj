@@ -41,11 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IStringService.cs" />
+    <Compile Include="IFilterService.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StringResponse.cs" />
-    <Compile Include="StringService.cs" />
+    <Compile Include="FilterResponse.cs" />
+    <Compile Include="FilterService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
